@@ -7,4 +7,8 @@ RUN 	apt-get update && \
 
 ADD run-postfix.sh /etc/service/app/run
 
+RUN mkdir -p /var/spool/postfix/etc/
+
+ADD resolv.conf  /var/spool/postfix/etc/resolv.conf
+
 ENTRYPOINT ["/sbin/my_init"]
