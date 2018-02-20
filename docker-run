@@ -1,0 +1,6 @@
+docker run \
+--detach \
+--name default-postfix \
+--restart unless-stopped \
+-p 25:25 \
+postfix
